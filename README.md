@@ -28,3 +28,11 @@ A aplicação permite gerenciar **clientes**, seus **endereços** (com consulta 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Marcola20/ClientsAPI.git
+2. Abra a solução no Visual Studio 2022 ou superior.
+3. Execute o projeto (Ctrl + F5).
+
+## 📝 Observações
+
+- As entidades estão mapeadas com relações 1:1 (Cliente-Endereço) e 1:N (Cliente-Contatos).
+- Todas as operações CRUD foram implementadas.
+- O projeto está configurado para usar banco em memória, o que facilita os testes e evita dependências externas.
