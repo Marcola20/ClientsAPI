@@ -90,7 +90,7 @@ public class ClientesController : ControllerBase
             var enderecoApi = await _cepService.ObterEnderecoPorCepAsync(dto.Endereco.Cep);
             enderecoApi.Numero = dto.Endereco.Numero;
             enderecoApi.Complemento = dto.Endereco.Complemento;
-            enderecoApi.ClienteId = clienteDb.ClienteID;
+            enderecoApi.ClienteID = clienteDb.ClienteID;
 
             clienteDb.Endereco = enderecoApi;
 
@@ -126,11 +126,12 @@ public class ClientesController : ControllerBase
             _context.Clientes.Remove(cliente);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new { mensagem = "Cliente excluído com sucesso." });
         }
         catch (Exception)
         {
             return StatusCode(500, new { erro = "Erro interno ao excluir o cliente." });
         }
     }
+
 }

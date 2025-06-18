@@ -16,11 +16,11 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Cliente>()
             .HasOne(c => c.Endereco)
             .WithOne()
-            .HasForeignKey<Endereco>(e => e.ClienteId);
+            .HasForeignKey<Endereco>(e => e.ClienteID);
 
         modelBuilder.Entity<Cliente>()
             .HasMany(c => c.Contatos)
             .WithOne()
-            .HasForeignKey(c => c.ClienteId);
+            .HasForeignKey(c => c.ClienteID);
     }
 }

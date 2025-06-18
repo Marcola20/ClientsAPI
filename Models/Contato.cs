@@ -6,5 +6,5 @@ public class Contato
     public string Tipo { get; set; } = string.Empty;
     public string Texto { get; set; } = string.Empty;
 
-    public int ClienteId { get; set; }
+    public int ClienteID { get; set; }
 }

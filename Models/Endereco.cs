@@ -9,5 +9,5 @@ public class Endereco
     public string Numero { get; set; } = string.Empty;
     public string Complemento { get; set; } = string.Empty;
 
-    public int ClienteId { get; set; }
+    public int ClienteID { get; set; }
 }
